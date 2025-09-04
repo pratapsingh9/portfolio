@@ -3,21 +3,23 @@
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
+/* ===== [MODERN] Light Theme Colors ===== */
 :root,
 html[data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
-  --muted: #e6e6e6;
-  --border: #ece9e9;
+  --background: #ffffff;      /* Clean and crisp white background */
+  --foreground: #1f2937;      /* Dark gray for text (softer than black) */
+  --accent: #3b82f6;          /* Modern, vibrant blue for links and highlights */
+  --muted: #f1f5f9;          /* Very light gray for card backgrounds */
+  --border: #e5e7eb;          /* Subtle light gray for borders */
 }
 
+/* ===== [MODERN] Dark Theme Colors ===== */
 html[data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --muted: #343f60;
-  --border: #ab4b08;
+  --background: #0d1117;      /* Deep charcoal/slate background (GitHub dark) */
+  --foreground: #c9d1d9;      /* Off-white for text for better readability */
+  --accent: #3b82f6;          /* Modern, vibrant blue for links and highlights */
+  --muted: #161b22;          /* Slightly lighter dark shade for cards */
+  --border: #303d36;          /* Subtle gray for borders */
 }
 
 @theme inline {
@@ -38,7 +40,8 @@ html[data-theme="dark"] {
     @apply overflow-y-scroll scroll-smooth;
   }
   body {
-    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+    /* ===== FIX APPLIED HERE ===== */
+    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background dark:selection:text-white;
   }
   a,
   button {
@@ -67,3 +70,6 @@ html[data-theme="dark"] {
 :target {
   scroll-margin-block: 1rem;
 }
+
+/* ===== Typography and Code Block styles remain the same ===== */
+/* You can paste the rest of your typography.css styles here if they were in the same file */

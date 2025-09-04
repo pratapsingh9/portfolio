@@ -1,37 +1,54 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "About"
+title: "About Me"
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+I’m someone who enjoys turning ideas into real projects that people can use and enjoy. For me, building isn’t just about writing code — it’s about solving problems, creating meaningful things, and bringing ideas to life on the web.
 
-![Astro Paper](public/astropaper-og.jpg)
+I love experimenting with new concepts, whether it’s designing clean user experiences or just tinkering with projects for fun. I’ve made my share of mistakes along the way, and each one has taught me something valuable about patience, persistence, and how to make the next project even better.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+What excites me most is the journey from an idea to something real — the brainstorming, the challenges, and the “aha!” moments when things finally click.
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+---
 
-## Features
+## Technical Skills
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+Here are some of the technologies and tools I work with:
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+### 🖥️ Programming Languages
+- JavaScript (ES6+)
+- TypeScript
+- Python
+- C++
+- Dart
 
-and so much more.
+### 🌐 Web Development
 
-## Show your support
+**Frontend**
+- **React.js:** (major libs: Tailwind CSS, Framer Motion, Redux Toolkit, Recoil, MUI/Joy UI)
+- **Next.js:** (major libs: NextAuth, Prisma)
+- **Astro:** (used for portfolio/blog projects)
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+**Backend**
+- **Node.js:** (Express.js)
+- **Prisma:** (ORM for databases)
+- **Redis:** (for caching/data store)
+- **Other Tools:** Puppeteer (for scraping/automation), WebSockets (wss)
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
+### 📱 Mobile Development
+- **React Native (Expo):** (major libs: React Navigation, SQLite/Realm)
+- **Flutter (Dart):** (major libs: Cubit for state management)
 
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
+### 🗄️ Databases
+- PostgreSQL / MySQL (via Prisma)
+- SQLite / Realm (for React Native apps)
+- Redis
 
-Kyay zuu! 🙏🏼
+### ☁️ Cloud & DevOps
+- **AWS:** (EC2, S3, CloudFront, Storage Gateway basics)
+- **GitHub Actions:** (for CI/CD)
+- **Microsoft Azure**
+- **PM2:** (Node.js process manager)
+
+### 🔎 Data Structures & Algorithms
+- Proficient in C++ implementations of various DS & Algo concepts, including Binary Trees (traversals, views, AVL trees), Vectors, and both Recursive/Iterative approaches.

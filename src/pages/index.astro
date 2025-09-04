@@ -8,7 +8,6 @@ import LinkButton from "@/components/LinkButton.astro";
 import Card from "@/components/Card.astro";
 import Hr from "@/components/Hr.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
-import IconRss from "@/assets/icons/IconRss.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
@@ -23,80 +22,66 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 <Layout>
   <Header />
   <main id="main-content" data-layout="index">
-    <section id="hero" class="pt-8 pb-6">
+    <section id="hero" class="pt-8 pb-12">
       <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        Mingalaba
+        Pratap Singh
       </h1>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="inline-block"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <IconRss
-          width={20}
-          height={20}
-          class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
-        />
-        <span class="sr-only">RSS Feed</span>
-      </a>
+      <p class="mb-6 text-2xl font-semibold">Computer Science Student</p>
 
-      <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
-      </p>
-      <p class="mt-2">
-        Read the blog posts or check
-        <LinkButton
-          class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
-      </p>
-      {
-        // only display if at least one social link is enabled
-        SOCIALS.length > 0 && (
-          <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
+      <div class="max-w-prose">
+        <p>
+          I believe in growth through dedication and curiosity. I enjoy solving
+          problems, thinking deeply about how things work, and finding better
+          ways to approach life and work. My habits of consistency, patience, and
+          attention to detail help me deliver high-quality results.
+        </p>
+      </div>
+
+      <div class="mt-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+        <LinkButton href="mailto:pratap.09082005@gmail.com">
+          Get In Touch
+        </LinkButton>
+        {
+          SOCIALS.length > 0 && (
+            <div class="flex items-center gap-2">
+              <span class="whitespace-nowrap">Connect with me:</span>
+              <Socials />
+            </div>
+          )
+        }
+      </div>
     </section>
-
-    <Hr />
 
     {
       featuredPosts.length > 0 && (
         <>
-          <section id="featured" class="pt-12 pb-6">
-            <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
-            <ul>
-              {featuredPosts.map(data => (
-                <Card variant="h3" {...data} />
-              ))}
+          <Hr />
+          <section id="featured" class="py-12">
+            <h2 class="text-2xl font-semibold tracking-wide">
+              Featured Articles
+            </h2>
+            <ul class="mt-8">
+              {featuredPosts.map(data => <Card variant="h3" {...data} />)}
             </ul>
           </section>
-          {recentPosts.length > 0 && <Hr />}
         </>
       )
     }
 
     {
       recentPosts.length > 0 && (
-        <section id="recent-posts" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
-          <ul>
-            {recentPosts.map(
-              (data, index) =>
-                index < SITE.postPerIndex && <Card variant="h3" {...data} />
-            )}
-          </ul>
-        </section>
+        <>
+          {featuredPosts.length > 0 && <Hr />}
+          <section id="recent-posts" class="py-12">
+            <h2 class="text-2xl font-semibold tracking-wide">Latest Writings</h2>
+            <ul class="mt-8">
+              {recentPosts.map(
+                (data, index) =>
+                  index < SITE.postPerIndex && <Card variant="h3" {...data} />
+              )}
+            </ul>
+          </section>
+        </>
       )
     }
 

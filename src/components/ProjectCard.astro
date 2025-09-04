@@ -1,0 +1,53 @@
+---
+// src/components/ProjectCard.astro
+import Datetime from "./Datetime.astro";
+
+export interface Props {
+  project: {
+    id: string;
+    slug: string;
+    data: {
+      title: string;
+      description: string;
+      pubDatetime: Date;
+      tags: string[];
+      imgSrc?: string;
+      repoUrl?: string;
+      demoUrl?: string;
+    };
+  };
+}
+
+const { project } = Astro.props;
+const { slug, data } = project;
+const { title, description, imgSrc, repoUrl, demoUrl, tags } = data;
+---
+
+<a href={`/projects/${slug}/`} class="group block rounded-lg border border-border bg-background p-4 transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
+  {
+    imgSrc && (
+      <img
+        src={imgSrc}
+        alt={`Cover image for ${title}`}
+        class="mb-4 aspect-video w-full rounded-md object-cover"
+      />
+    )
+  }
+  <div class="mb-2">
+    <h3 class="text-xl font-semibold text-accent group-hover:underline">
+      {title}
+    </h3>
+    <p class="mt-2 text-sm text-foreground/80">{description}</p>
+  </div>
+  <div class="mt-4 flex flex-wrap gap-2">
+    {tags.map(tag => (
+      <span class="rounded-full bg-muted px-2 py-0.5 text-xs font-medium text-foreground">
+        {tag}
+      </span>
+    ))}
+  </div>
+  <div class="mt-4 flex items-center gap-4 text-sm">
+    {repoUrl && <a href={repoUrl} target="_blank" rel="noopener noreferrer" class="underline-offset-4 hover:underline">GitHub</a>}
+    {demoUrl && <a href={demoUrl} target="_blank" rel="noopener noreferrer" class="underline-offset-4 hover:underline">Live Demo</a>}
+  </div>
+</a>

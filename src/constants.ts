@@ -25,19 +25,19 @@ export const SOCIALS: Social[] = [
   },
   {
     name: "X",
-    href: "https://x.com/username",
+    href: "https://x.com/pratap_singh_09",
     linkTitle: `${SITE.title} on X`,
     icon: IconBrandX,
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/username/",
+    href: "https://www.linkedin.com/in/singhpratapsisodiya999/",
     linkTitle: `${SITE.title} on LinkedIn`,
     icon: IconLinkedin,
   },
   {
     name: "Mail",
-    href: "mailto:yourmail@gmail.com",
+    href: "mailto:pratap.09082005@gmail.com",
     linkTitle: `Send an email to ${SITE.title}`,
     icon: IconMail,
   },
